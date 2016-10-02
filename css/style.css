@@ -1,0 +1,13 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	min-height: 100%;
+	color: black;
+}
+
+.container{
+	margin-top: 5%;
+}
