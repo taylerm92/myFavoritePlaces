@@ -1,5 +1,6 @@
 <?php
 	// This is the index page.
+	include 'insert.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +12,7 @@
 	</head>
 	<body>
 	<div class="container">
-			<form class="form-horizontal" action="index.php" method="POST">
+			<form class="form-horizontal" action="" method="post">
 
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="placeName">Name for place:</label>
@@ -40,22 +41,9 @@
 
 			</form>
 
-			<?php
-				if(!isset($_POST['streetAddress']))
-				{
-					$address = urlencode($_POST['streetAddress']);
-					$url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.$address.'&sensor=false';
-					$geocode = file_get_contents($url);
-					$results = json_decode($geocode, true);
-					if($results['status']=='OK')
-					{
-						$lat = $results['results'][0]['geometry']['location']['lat'];
-						$lng = $results['results'][0]['geometry']['location']['lng'];
-					}
-				}
-			?>
+
 	</div>
-	<!-- Scripts that shouldn't effect page load go right before the closing body tag -->
+	<!-- Scripts that shouldnt effect page load go right before the closing body tag -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
 </html>
