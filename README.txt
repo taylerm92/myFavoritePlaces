@@ -1,0 +1,2 @@
+This is a small application that allows users to mark their favorite places on a Google Map using Google's API
+This application will show all markers on the map or filter the map by keyword search of the description of the markers.

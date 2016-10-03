@@ -35,8 +35,10 @@
 						<textarea rows="10" class="form-control" id="description" name="description"></textarea>
 					</div>
 				</div>
-
-				<div class="col-sm-12" style="text-align:right;">
+				<div class="col-sm-4" style="text-align:left;">
+					<a href="sqltojson.php">Go to map page</a>
+				</div>
+				<div class="col-sm-8" style="text-align:right;">
 					<button type="submit" class="btn btn-default" style="margin-bottom: 10px;">Submit</button> <!-- button to submit form -->
 				</div>
 
