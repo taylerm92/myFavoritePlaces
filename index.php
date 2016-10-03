@@ -9,6 +9,7 @@
 		<!-- Bootstrap MaxCDN -->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/myFavoritePlaces/css/style.css">
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCT2hpnHS-9uutIKMPKW9MolhDGqCU04NE"></script>
 	</head>
 	<body>
 	<div class="container">
