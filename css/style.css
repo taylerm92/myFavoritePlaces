@@ -5,7 +5,48 @@
 
 html, body {
 	min-height: 100%;
-	color: black;
+	color: white;
+	font-size: 20px;
+	text-shadow: 1px 1px 5px red;
+	background-image: url(/myFavoritePlaces/images/globe.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h3{
+	text-align: center;
+	font-size: 60px;
+	text-shadow: 1px 1px 20px red;
+}
+
+a{
+	color: white;
+}
+
+a:hover{
+	color: white;
+}
+
+.logo{
+	text-align: center;
+	margin-left: 100px;
+	margin-top: 100px;
+}
+
+#map{
+	margin: 0 auto;
+	border-radius: 5px;
+	border: 1px solid red;
+	box-shadow: 0px 0px 20px red;
+}
+
+.keyword{
+	width: 50%;
+	margin: 0 auto;
+}
+
+#keyword, #placeName, #streetAddress, #description{
+	box-shadow: 0px 0px 20px red;
 }
 
 .container{

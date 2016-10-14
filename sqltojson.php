@@ -18,11 +18,11 @@
     $emparray[] = $row;
   }
 
-  echo json_encode($emparray);
+  //echo json_encode($emparray);
   mysqli_close($con);
 
   $length = count($emparray);
-  echo $length;
+  //echo $length;
 ?>
 <html>
   <head>
@@ -34,26 +34,36 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD9DEz4zv2NRZjDOkLACx0LK4uhiIeq_8k"></script>
     <script type="text/javascript" src="/myFavoritePlaces/scripts/gmaps.js"></script>
+    <style>
+      html,body{
+        background-image: url(/myFavoritePlaces/images/wallpaper.jpg);
+        background-size: cover;
+				background-repeat: no-repeat;
+        overflow: hidden;
+        color: black;
+        text-shadow: none;
+      }
+    </style>
   </head>
   <body>
     <div class = "container">
-      <form class="form-horizontal" action="sqltojson.php" method="post">
-
+      <h3><a href="index.php" style="margin: 0 auto;">Insert more markers</a></h3>
+      <div id="map" style="width: 80%; height:50%"></div>
+      <br \>
+      <p style="color: red; text-align: center;">Press Submit with nothing in keyword search to display all markers!  </p>
+      <form class="form-horizontal keyword" action="sqltojson.php" method="post">
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="keyword" style="text-align: left;">Keyword search:</label>
-					<div class="col-sm-10">
+					<label class="control-label col-sm-4" for="keyword" style="text-align: left; color: white; text-shadow: 2px 2px 5px red;">Keyword search:</label>
+					<div class="col-sm-8">
 						<input type="text" class="form-control" id="keyword" name="keyword">
 					</div>
 				</div>
 
         <div class="col-sm-12" style="text-align:right;">
-          <p style="color: red;">Press Submit with nothing in keyword search to display all markers!  </p>
-					<button type="submit" class="btn btn-default" style="margin-bottom: 10px;">Submit</button> <!-- button to submit form -->
-				</div>
 
+					<button type="submit" class="btn btn-default" style="box-shadow: 0px 0px 30px red;">Submit</button> <!-- button to submit form -->
+				</div>
       </form>
-      <div id="map" style="width: 100%; height:30%"></div>
-      <a href="index.php" style="margin: 0 auto;">Insert more markers</a>
     </div>
     <script type="text/javascript"> //map specific javascript
       $(document).ready(function(){
